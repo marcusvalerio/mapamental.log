@@ -1,4 +1,4 @@
-# mapamental.log
+# Mapa Mental .LOG
 
 Ambiente editorial de estudos para a disciplina **Processos de Suprimentos**.
 
@@ -19,9 +19,9 @@ Produto digital editorial: tipografia limpa, fundo papel quente, contraste cuida
 
 ## Estrutura
 
-- `index.html` — página principal.
-- `styles.css` — estilos responsivos.
-- `app.js` — mapa interativo, progresso e quiz.
+- `index.html` — página única (HTML+CSS+JS), visual Liquid Glass estilo iOS 26.
+
+
 - `vercel.json` — publicação estática na Vercel.
 
 ## Publicação
