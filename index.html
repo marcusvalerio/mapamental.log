@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f2" />
+  <meta name="description" content="Mapa mental interativo de Processos de Suprimentos — revisão, fórmulas e quiz." />
+  <title>Processos de Suprimentos — mapa de estudos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="light">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Mapa Mental início"><span class="brand-mark">m.</span><span>mapamental<span class="brand-dot">.</span>log</span></a>
+    <div class="top-meta"><span class="live-dot"></span> AMBIENTE DE ESTUDOS <span class="meta-divider"></span> LOGÍSTICA</div>
+    <button class="icon-button" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">☼</button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>TRILHA DE APRENDIZAGEM</span><span class="eyebrow-line"></span><span>01 / 06</span></div>
+        <h1>Processos de<br><em>Suprimentos.</em></h1>
+        <p class="hero-lede">Do planejamento da compra ao controle do fornecedor. Entenda como as peças se conectam — e estude com intenção.</p>
+        <div class="hero-actions"><a class="primary-button" href="#mapa">Explorar mapa <span>↘</span></a><button class="text-button" id="startQuiz">Testar conhecimentos <span>↗</span></button></div>
+      </div>
+      <div class="hero-art" aria-label="Diagrama abstrato de conexões">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+        <div class="orbit-core"><span class="core-icon">⌘</span><strong>SUPRIMENTOS</strong><small>VISÃO SISTÊMICA</small></div>
+        <span class="orbit-node node-a">01 <b>COMPRAS</b></span><span class="orbit-node node-b">02 <b>IMPORTAÇÃO</b></span><span class="orbit-node node-c">03 <b>FINANÇAS</b></span><span class="orbit-node node-d">04 <b>FORNECEDORES</b></span><span class="orbit-node node-e">05 <b>CONTROLE</b></span>
+      </div>
+      <div class="hero-foot"><span>CURSO TÉCNICO EM LOGÍSTICA</span><span>BASEADO NO MATERIAL DE AULA · JEFFERSON SANTOS</span></div>
+    </section>
+    <section class="study-strip">
+      <div><span class="strip-label">SEU PROGRESSO</span><strong id="progressText">0 de 6 temas revisados</strong></div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <button id="resetProgress" class="quiet-button">Reiniciar progresso ↺</button>
+    </section>
+    <section class="section-heading" id="mapa"><div><div class="eyebrow"><span>MAPA MENTAL INTERATIVO</span></div><h2>Veja o todo. <em>Conecte as partes.</em></h2></div><p>Selecione um núcleo para abrir os conceitos, exemplos e pontos de atenção.</p></section>
+    <section class="map-layout">
+      <aside class="map-rail"><span class="rail-number">01 — 06</span><span class="rail-line"></span><span class="rail-caption">NÚCLEOS DE ESTUDO</span></aside>
+      <div class="topic-grid" id="topicGrid">
+        <button class="topic-card topic-green" data-topic="compras"><span class="topic-index">01 / FUNDAMENTO</span><span class="topic-icon">↗</span><h3>Processo<br>de compras</h3><p>O fluxo que transforma uma necessidade em abastecimento.</p><span class="topic-bottom">7 ETAPAS + COTAÇÃO <b>↗</b></span></button>
+        <button class="topic-card topic-blue" data-topic="importacao"><span class="topic-index">02 / COMÉRCIO EXTERIOR</span><span class="topic-icon">◎</span><h3>Importação<br>e Incoterms</h3><p>Órgãos anuentes, Drawback, responsabilidades e câmbio.</p><span class="topic-bottom">4 CONCEITOS-CHAVE <b>↗</b></span></button>
+        <button class="topic-card topic-violet" data-topic="financeiro"><span class="topic-index">03 / CÁLCULOS</span><span class="topic-icon">∑</span><h3>Matemática<br>financeira</h3><p>Juros, montante, taxa, prazo e retorno sobre investimento.</p><span class="topic-bottom">FÓRMULAS + EXEMPLOS <b>↗</b></span></button>
+        <button class="topic-card topic-amber" data-topic="fornecedores"><span class="topic-index">04 / RELACIONAMENTO</span><span class="topic-icon">◇</span><h3>Negociação<br>e fornecedores</h3><p>Negociar melhor, homologar e construir parcerias confiáveis.</p><span class="topic-bottom">2 MODELOS + HOMOLOGAÇÃO <b>↗</b></span></button>
+        <button class="topic-card topic-cyan" data-topic="controle"><span class="topic-index">05 / GOVERNANÇA</span><span class="topic-icon">⌁</span><h3>Controle<br>e integração</h3><p>Auditorias, contratos e sistemas que conectam a operação.</p><span class="topic-bottom">AUDITORIA · SLA · VMI · EDI · ERP <b>↗</b></span></button>
+        <button class="topic-card topic-rose" data-topic="riscos"><span class="topic-index">06 / CONTINGÊNCIA</span><span class="topic-icon">⌖</span><h3>Gestão de<br>riscos e atrasos</h3><p>Agir antes que a falta de material pare a produção.</p><span class="topic-bottom">PLANO DE AÇÃO EM 5 PASSOS <b>↗</b></span></button>
+      </div>
+    </section>
+    <section class="detail-section" id="detalhes" aria-live="polite">
+      <div class="detail-placeholder"><span class="placeholder-icon">✳</span><div><span class="strip-label">CENTRO DE CONHECIMENTO</span><h3>Escolha um núcleo acima.</h3><p>O conteúdo detalhado aparece aqui, sem perder a visão geral do mapa.</p></div></div>
+      <div id="detailContent" hidden></div>
+    </section>
+    <section class="formula-section" id="formulas">
+      <div class="section-heading compact"><div><div class="eyebrow"><span>FOLHA DE REVISÃO</span></div><h2>Fórmulas que você <em>precisa dominar.</em></h2></div><p>Deixe esta área aberta durante os exercícios de cálculo.</p></div>
+      <div class="formula-grid">
+        <article class="formula-card"><span class="formula-tag">JUROS SIMPLES</span><div class="formula">J = C × i × t</div><p>Juros calculados somente sobre o capital inicial.</p><div class="formula-sub">M = C + J</div><button class="copy-formula" data-copy="J = C × i × t | M = C + J">Copiar fórmula ↗</button></article>
+        <article class="formula-card featured"><span class="formula-tag">JUROS COMPOSTOS</span><div class="formula">M = C × (1 + i)<sup>n</sup></div><p>Juros calculados sobre o capital e os juros acumulados.</p><div class="formula-sub">J = M − C</div><button class="copy-formula" data-copy="M = C × (1 + i)^n | J = M − C">Copiar fórmula ↗</button></article>
+        <article class="formula-card"><span class="formula-tag">RETORNO SOBRE INVESTIMENTO</span><div class="formula">ROI = (RL ÷ I) × 100</div><p>Relaciona o retorno líquido ao valor investido.</p><div class="formula-sub">Resultado em porcentagem (%)</div><button class="copy-formula" data-copy="ROI = (Retorno líquido ÷ Investimento) × 100">Copiar fórmula ↗</button></article>
+        <article class="formula-card"><span class="formula-tag">VARIAÇÃO CAMBIAL</span><div class="formula formula-small">Impacto = US$ × (câmbio<sub>pagamento</sub> − câmbio<sub>contratação</sub>)</div><p>Mostra o efeito da mudança cambial sobre o custo da aquisição.</p><div class="formula-sub">Dólar maior no pagamento = custo maior em reais.</div><button class="copy-formula" data-copy="Impacto = Valor em US$ × (câmbio no pagamento − câmbio na contratação)">Copiar fórmula ↗</button></article>
+      </div>
+      <div class="attention-note"><span>!</span><p><strong>Regra de ouro:</strong> transforme a taxa percentual em decimal (2% = 0,02) e mantenha taxa e prazo na mesma unidade de tempo.</p></div>
+    </section>
+    <section class="compare-section">
+      <div class="section-heading compact"><div><div class="eyebrow"><span>COMPARE E NÃO CONFUNDA</span></div><h2>Conceitos que parecem iguais. <em>Mas não são.</em></h2></div></div>
+      <div class="compare-grid">
+        <article class="compare-card"><div class="compare-label">NEGOCIAÇÃO</div><h3>Distributiva <span class="loss">GANHA–PERDE</span></h3><ul><li>Uma variável, geralmente preço.</li><li>Uma parte ganha o que a outra perde.</li><li>Relação pontual e competitiva.</li></ul></article>
+        <article class="compare-card compare-highlight"><div class="compare-label">NEGOCIAÇÃO</div><h3>Integrativa <span class="win">GANHA–GANHA</span></h3><ul><li>Várias variáveis ao mesmo tempo.</li><li>As duas partes podem sair melhor.</li><li>Favorece parceria de longo prazo.</li></ul></article>
+        <article class="compare-card"><div class="compare-label">MATEMÁTICA</div><h3>Juros simples <span class="loss">LINEAR</span></h3><ul><li>Incidem sobre o capital inicial.</li><li>Crescimento em linha reta.</li><li>Fórmula: J = C × i × t.</li></ul></article>
+        <article class="compare-card compare-highlight"><div class="compare-label">MATEMÁTICA</div><h3>Juros compostos <span class="win">JUROS SOBRE JUROS</span></h3><ul><li>Incidem sobre o valor acumulado.</li><li>O montante cresce por períodos.</li><li>Fórmula: M = C × (1 + i)ⁿ.</li></ul></article>
+      </div>
+    </section>
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-intro"><div class="eyebrow"><span>FIXAÇÃO ATIVA</span></div><h2>Aprendeu mesmo<br><em>ou só leu?</em></h2><p>Responda 8 questões inspiradas diretamente no material da aula. Veja seu resultado e revise os pontos que errou.</p><div class="quiz-stat"><strong>08</strong><span>QUESTÕES<br>DE REVISÃO</span></div></div>
+      <div class="quiz-panel" id="quizPanel"><div class="quiz-start"><span class="quiz-symbol">✳</span><span class="strip-label">CHECKPOINT DE APRENDIZAGEM</span><h3>Hora de testar sua compreensão.</h3><p>Uma questão por vez. Sem pressão: o objetivo é descobrir o que merece mais uma revisão.</p><button class="primary-button" id="beginQuiz">Começar quiz <span>→</span></button></div></div>
+    </section>
+    <section class="study-plan">
+      <div class="eyebrow"><span>ESTRATÉGIA DE ESTUDO</span></div><h2>Uma sequência que <em>faz sentido.</em></h2>
+      <div class="plan-list">
+        <div class="plan-step"><span class="plan-num">01</span><div><h3>Entenda o fluxo de compras</h3><p>Comece pela sequência das sete etapas. Entenda como uma necessidade vira um pedido acompanhado até o recebimento.</p></div><span class="plan-time">BASE</span></div>
+        <div class="plan-step"><span class="plan-num">02</span><div><h3>Domine os conceitos de importação</h3><p>Associe cada órgão ao produto, diferencie as três modalidades de Drawback e memorize os grupos dos Incoterms.</p></div><span class="plan-time">MEMORIZAÇÃO</span></div>
+        <div class="plan-step"><span class="plan-num">03</span><div><h3>Treine os cálculos</h3><p>Pratique câmbio, juros simples, compostos e ROI. Escreva a fórmula antes de substituir os valores.</p></div><span class="plan-time">PRÁTICA</span></div>
+        <div class="plan-step"><span class="plan-num">04</span><div><h3>Compare negociação e homologação</h3><p>Explique com suas palavras a diferença entre ganha-perde e ganha-ganha. Revise todos os critérios de homologação.</p></div><span class="plan-time">COMPREENSÃO</span></div>
+        <div class="plan-step"><span class="plan-num">05</span><div><h3>Conecte controle, contrato e tecnologia</h3><p>Separe os tipos de auditoria e saiba o papel de SLA, VMI, EDI e ERP.</p></div><span class="plan-time">ASSOCIAÇÃO</span></div>
+        <div class="plan-step"><span class="plan-num">06</span><div><h3>Resolva o cenário de atraso</h3><p>Treine a ordem de ação: contatar, usar canais, avaliar estoque, acionar plano B, comunicar e registrar.</p></div><span class="plan-time">APLICAÇÃO</span></div>
+      </div>
+    </section>
+    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">m.</span><span>mapamental<span class="brand-dot">.</span>log</span></a><p>Feito para estudar com clareza. <span>Uma ideia de cada vez.</span></p><span class="footer-source">CONTEÚDO BASE: RESUMO — PROCESSOS DE SUPRIMENTOS · 14 SLIDES</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
