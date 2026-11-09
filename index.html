@@ -39,16 +39,30 @@
       <button id="resetProgress" class="quiet-button">Reiniciar progresso ↺</button>
     </section>
     <section class="section-heading" id="mapa"><div><div class="eyebrow"><span>MAPA MENTAL INTERATIVO</span></div><h2>Veja o todo. <em>Conecte as partes.</em></h2></div><p>Selecione um núcleo para abrir os conceitos, exemplos e pontos de atenção.</p></section>
-    <section class="map-layout">
-      <aside class="map-rail"><span class="rail-number">01 — 06</span><span class="rail-line"></span><span class="rail-caption">NÚCLEOS DE ESTUDO</span></aside>
-      <div class="topic-grid" id="topicGrid">
-        <button class="topic-card topic-green" data-topic="compras"><span class="topic-index">01 / FUNDAMENTO</span><span class="topic-icon">↗</span><h3>Processo<br>de compras</h3><p>O fluxo que transforma uma necessidade em abastecimento.</p><span class="topic-bottom">7 ETAPAS + COTAÇÃO <b>↗</b></span></button>
-        <button class="topic-card topic-blue" data-topic="importacao"><span class="topic-index">02 / COMÉRCIO EXTERIOR</span><span class="topic-icon">◎</span><h3>Importação<br>e Incoterms</h3><p>Órgãos anuentes, Drawback, responsabilidades e câmbio.</p><span class="topic-bottom">4 CONCEITOS-CHAVE <b>↗</b></span></button>
-        <button class="topic-card topic-violet" data-topic="financeiro"><span class="topic-index">03 / CÁLCULOS</span><span class="topic-icon">∑</span><h3>Matemática<br>financeira</h3><p>Juros, montante, taxa, prazo e retorno sobre investimento.</p><span class="topic-bottom">FÓRMULAS + EXEMPLOS <b>↗</b></span></button>
-        <button class="topic-card topic-amber" data-topic="fornecedores"><span class="topic-index">04 / RELACIONAMENTO</span><span class="topic-icon">◇</span><h3>Negociação<br>e fornecedores</h3><p>Negociar melhor, homologar e construir parcerias confiáveis.</p><span class="topic-bottom">2 MODELOS + HOMOLOGAÇÃO <b>↗</b></span></button>
-        <button class="topic-card topic-cyan" data-topic="controle"><span class="topic-index">05 / GOVERNANÇA</span><span class="topic-icon">⌁</span><h3>Controle<br>e integração</h3><p>Auditorias, contratos e sistemas que conectam a operação.</p><span class="topic-bottom">AUDITORIA · SLA · VMI · EDI · ERP <b>↗</b></span></button>
-        <button class="topic-card topic-rose" data-topic="riscos"><span class="topic-index">06 / CONTINGÊNCIA</span><span class="topic-icon">⌖</span><h3>Gestão de<br>riscos e atrasos</h3><p>Agir antes que a falta de material pare a produção.</p><span class="topic-bottom">PLANO DE AÇÃO EM 5 PASSOS <b>↗</b></span></button>
+    <section class="map-layout map-layout-new">
+      <div class="map-toolbar">
+        <div><span class="strip-label">MAPA CONCEITUAL · VISÃO GERAL</span><p>Seis núcleos conectados por processos, decisões e informações compartilhadas.</p></div>
+        <div class="map-legend"><span><i class="legend-dot"></i> Núcleo principal</span><span><i class="legend-line"></i> Relação entre conceitos</span></div>
       </div>
+      <div class="map-scroll" aria-label="Mapa conceitual de processos de suprimentos; deslize horizontalmente para explorar">
+        <div class="map-stage">
+          <svg class="map-connectors" viewBox="0 0 1120 680" preserveAspectRatio="none" aria-hidden="true">
+            <path class="connector-main" d="M560 340 V300 H195 V238 M560 300 H560 V238 M560 300 H925 V238 M560 340 V380 H195 V442 M560 380 H560 V442 M560 380 H925 V442"/>
+            <path class="connector-cross" d="M355 145 H405 V545 H765 V145 M715 145 H765 V545 M355 545 H405 V145 M715 545 H765 V145"/>
+            <circle cx="560" cy="340" r="5" class="connector-joint"/>
+            <circle cx="195" cy="300" r="3" class="connector-joint"/><circle cx="925" cy="300" r="3" class="connector-joint"/>
+            <circle cx="195" cy="380" r="3" class="connector-joint"/><circle cx="925" cy="380" r="3" class="connector-joint"/>
+          </svg>
+          <div class="map-center"><span>VISÃO SISTÊMICA</span><strong>PROCESSOS DE<br>SUPRIMENTOS</strong><small>DA NECESSIDADE À CONTINUIDADE</small></div>
+          <button class="topic-card topic-green map-node node-01" data-topic="compras"><span class="node-top"><span>01 · AQUISIÇÃO</span><b>↗</b></span><h3>Processo de compras</h3><p>Transformar uma necessidade em abastecimento.</p><div class="node-tags"><span>Requisição</span><span>Cotação</span><span>Negociação</span><span>Pedido</span><span>Aprovação</span><span>Follow-up</span></div><span class="node-foot">FLUXO DE AQUISIÇÃO <i>→</i></span></button>
+          <button class="topic-card topic-blue map-node node-02" data-topic="importacao"><span class="node-top"><span>02 · COMÉRCIO EXTERIOR</span><b>↗</b></span><h3>Importação</h3><p>Regras, responsabilidades e custos internacionais.</p><div class="node-tags"><span>MAPA</span><span>ANVISA</span><span>ANATEL</span><span>Drawback</span><span>Incoterms</span><span>Câmbio</span></div><span class="node-foot">REGRAS E OPERAÇÃO <i>→</i></span></button>
+          <button class="topic-card topic-violet map-node node-03" data-topic="financeiro"><span class="node-top"><span>03 · CÁLCULOS</span><b>↗</b></span><h3>Matemática financeira</h3><p>Mensurar custos, juros e retorno.</p><div class="node-tags"><span>Juros simples</span><span>Compostos</span><span>Montante</span><span>Taxas</span><span>ROI</span></div><span class="node-foot">ANÁLISE DE VALOR <i>→</i></span></button>
+          <button class="topic-card topic-amber map-node node-04" data-topic="fornecedores"><span class="node-top"><span>04 · RELACIONAMENTO</span><b>↗</b></span><h3>Fornecedores</h3><p>Selecionar, avaliar e desenvolver parcerias.</p><div class="node-tags"><span>Homologação</span><span>Qualidade</span><span>Capacidade</span><span>Desempenho</span><span>Negociação</span></div><span class="node-foot">GESTÃO DE PARCEIROS <i>→</i></span></button>
+          <button class="topic-card topic-cyan map-node node-05" data-topic="controle"><span class="node-top"><span>05 · GOVERNANÇA</span><b>↗</b></span><h3>Controle e integração</h3><p>Monitorar compromissos e conectar sistemas.</p><div class="node-tags"><span>Auditoria</span><span>Contratos</span><span>SLA</span><span>VMI</span><span>EDI</span><span>ERP</span></div><span class="node-foot">INFORMAÇÃO E CONTROLE <i>→</i></span></button>
+          <button class="topic-card topic-rose map-node node-06" data-topic="riscos"><span class="node-top"><span>06 · CONTINUIDADE</span><b>↗</b></span><h3>Gestão de riscos</h3><p>Antecipar atrasos e proteger a operação.</p><div class="node-tags"><span>Atrasos</span><span>Cobertura</span><span>Plano B</span><span>Alternativas</span><span>Contingência</span></div><span class="node-foot">PREVENÇÃO E RESPOSTA <i>→</i></span></button>
+        </div>
+      </div>
+      <div class="map-hint"><span>↔</span> No celular, deslize para os lados para percorrer o mapa. Selecione um núcleo para abrir o conteúdo.</div>
     </section>
     <section class="detail-section" id="detalhes" aria-live="polite">
       <div class="detail-placeholder"><span class="placeholder-icon">✳</span><div><span class="strip-label">CENTRO DE CONHECIMENTO</span><h3>Escolha um núcleo acima.</h3><p>O conteúdo detalhado aparece aqui, sem perder a visão geral do mapa.</p></div></div>
