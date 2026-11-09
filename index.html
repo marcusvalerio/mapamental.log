@@ -3,83 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f5f5f2" />
-  <meta name="description" content="Mapa mental interativo de Processos de Suprimentos — revisão, fórmulas e quiz." />
-  <title>Processos de Suprimentos — mapa de estudos</title>
+  <meta name="theme-color" content="#f3f3ee" />
+  <meta name="description" content="Mapa mental interativo de Processos de Suprimentos. Conecte conceitos, revise fórmulas e teste seus conhecimentos." />
+  <title>Processos de Suprimentos — mapa mental</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="light">
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Mapa Mental início"><span class="brand-mark">m.</span><span>mapamental<span class="brand-dot">.</span>log</span></a>
-    <div class="top-meta"><span class="live-dot"></span> AMBIENTE DE ESTUDOS <span class="meta-divider"></span> LOGÍSTICA</div>
+    <div class="top-meta"><span class="live-dot"></span> CADERNO INTERATIVO <span class="meta-divider"></span> LOGÍSTICA</div>
     <button class="icon-button" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">☼</button>
   </header>
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span>TRILHA DE APRENDIZAGEM</span><span class="eyebrow-line"></span><span>01 / 06</span></div>
+        <div class="eyebrow"><span>MAPA DE APRENDIZAGEM</span><span class="eyebrow-line"></span><span>01 — 06</span></div>
         <h1>Processos de<br><em>Suprimentos.</em></h1>
-        <p class="hero-lede">Do planejamento da compra ao controle do fornecedor. Entenda como as peças se conectam — e estude com intenção.</p>
-        <div class="hero-actions"><a class="primary-button" href="#mapa">Explorar mapa <span>↘</span></a><button class="text-button" id="startQuiz">Testar conhecimentos <span>↗</span></button></div>
+        <p class="hero-lede">Uma visão conectada da cadeia de suprimentos: da necessidade de compra à continuidade da operação.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#mapa">Explorar mapa <span>↘</span></a>
+          <button class="text-button" id="startQuiz">Testar conhecimentos <span>↗</span></button>
+        </div>
       </div>
-      <div class="hero-art" aria-label="Diagrama abstrato de conexões">
-        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
-        <div class="orbit-core"><span class="core-icon">⌘</span><strong>SUPRIMENTOS</strong><small>VISÃO SISTÊMICA</small></div>
-        <span class="orbit-node node-a">01 <b>COMPRAS</b></span><span class="orbit-node node-b">02 <b>IMPORTAÇÃO</b></span><span class="orbit-node node-c">03 <b>FINANÇAS</b></span><span class="orbit-node node-d">04 <b>FORNECEDORES</b></span><span class="orbit-node node-e">05 <b>CONTROLE</b></span>
+      <div class="hero-aside">
+        <span class="aside-index">01 / VISÃO GERAL</span>
+        <p>Seis frentes que trabalham juntas para garantir abastecimento, custo, qualidade e fluxo contínuo.</p>
+        <div class="aside-rule"><span></span><b>DA ORIGEM AO RESULTADO</b></div>
       </div>
-      <div class="hero-foot"><span>CURSO TÉCNICO EM LOGÍSTICA</span><span>BASEADO NO MATERIAL DE AULA · JEFFERSON SANTOS</span></div>
+      <div class="hero-foot"><span>CURSO TÉCNICO EM LOGÍSTICA</span><span>BASEADO NO MATERIAL DE AULA · PROCESSOS DE SUPRIMENTOS</span></div>
     </section>
+
     <section class="study-strip">
       <div><span class="strip-label">SEU PROGRESSO</span><strong id="progressText">0 de 6 temas revisados</strong></div>
       <div class="progress-track"><span id="progressBar"></span></div>
       <button id="resetProgress" class="quiet-button">Reiniciar progresso ↺</button>
     </section>
-    <section class="section-heading" id="mapa"><div><div class="eyebrow"><span>MAPA MENTAL INTERATIVO</span></div><h2>Veja o todo. <em>Conecte as partes.</em></h2></div><p>Selecione um núcleo para abrir os conceitos, exemplos e pontos de atenção.</p></section>
-    <section class="map-layout map-layout-new">
-      <div class="map-toolbar">
-        <div><span class="strip-label">MAPA CONCEITUAL · VISÃO GERAL</span><p>Seis núcleos conectados por processos, decisões e informações compartilhadas.</p></div>
-        <div class="map-legend"><span><i class="legend-dot"></i> Núcleo principal</span><span><i class="legend-line"></i> Relação entre conceitos</span></div>
+
+    <section class="map-section" id="mapa">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span>MAPA MENTAL INTERATIVO</span></div><h2>O sistema por trás<br>do <em>abastecimento.</em></h2></div>
+        <p>Parta do conceito central e percorra cada frente. Selecione um bloco para abrir definições, etapas e pontos de atenção.</p>
       </div>
-      <div class="map-scroll" aria-label="Mapa conceitual de processos de suprimentos; deslize horizontalmente para explorar">
+      <div class="map-toolbar">
+        <span class="strip-label">NÚCLEO CENTRAL · 06 RAMIFICAÇÕES</span>
+        <div class="map-legend"><span><i class="legend-dot"></i> Tema principal</span><span><i class="legend-line"></i> Relação conceitual</span></div>
+      </div>
+      <div class="map-scroll">
         <div class="map-stage" id="topicGrid">
-          <svg class="map-connectors" viewBox="0 0 1120 680" preserveAspectRatio="none" aria-hidden="true">
-            <path class="connector-main" d="M560 340 V300 H195 V238 M560 300 H560 V238 M560 300 H925 V238 M560 340 V380 H195 V442 M560 380 H560 V442 M560 380 H925 V442"/>
-            <path class="connector-cross" d="M355 145 H405 V545 H765 V145 M715 145 H765 V545 M355 545 H405 V145 M715 545 H765 V145"/>
-            <circle cx="560" cy="340" r="5" class="connector-joint"/>
-            <circle cx="195" cy="300" r="3" class="connector-joint"/><circle cx="925" cy="300" r="3" class="connector-joint"/>
-            <circle cx="195" cy="380" r="3" class="connector-joint"/><circle cx="925" cy="380" r="3" class="connector-joint"/>
+          <svg class="map-connectors" viewBox="0 0 1180 690" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="branch" x1="0" x2="1"><stop offset="0" stop-color="#8da697"/><stop offset="1" stop-color="#b7c6bb"/></linearGradient></defs>
+            <path class="branch-line" d="M590 345 C500 345 500 125 405 125 H350 M590 345 C490 345 490 345 405 345 H350 M590 345 C500 345 500 565 405 565 H350"/>
+            <path class="branch-line" d="M590 345 C680 345 680 125 775 125 H830 M590 345 C690 345 690 345 775 345 H830 M590 345 C680 345 680 565 775 565 H830"/>
+            <circle class="branch-joint" cx="590" cy="345" r="7"/>
+            <circle class="branch-joint" cx="350" cy="125" r="4"/><circle class="branch-joint" cx="350" cy="345" r="4"/><circle class="branch-joint" cx="350" cy="565" r="4"/>
+            <circle class="branch-joint" cx="830" cy="125" r="4"/><circle class="branch-joint" cx="830" cy="345" r="4"/><circle class="branch-joint" cx="830" cy="565" r="4"/>
           </svg>
-          <div class="map-center"><span>VISÃO SISTÊMICA</span><strong>PROCESSOS DE<br>SUPRIMENTOS</strong><small>DA NECESSIDADE À CONTINUIDADE</small></div>
-          <button class="topic-card topic-green map-node node-01" data-topic="compras"><span class="node-top"><span>01 · AQUISIÇÃO</span><b>↗</b></span><h3>Processo de compras</h3><p>Transformar uma necessidade em abastecimento.</p><div class="node-tags"><span>Requisição</span><span>Cotação</span><span>Negociação</span><span>Pedido</span><span>Aprovação</span><span>Follow-up</span></div><span class="node-foot">FLUXO DE AQUISIÇÃO <i>→</i></span></button>
-          <button class="topic-card topic-blue map-node node-02" data-topic="importacao"><span class="node-top"><span>02 · COMÉRCIO EXTERIOR</span><b>↗</b></span><h3>Importação</h3><p>Regras, responsabilidades e custos internacionais.</p><div class="node-tags"><span>MAPA</span><span>ANVISA</span><span>ANATEL</span><span>Drawback</span><span>Incoterms</span><span>Câmbio</span></div><span class="node-foot">REGRAS E OPERAÇÃO <i>→</i></span></button>
-          <button class="topic-card topic-violet map-node node-03" data-topic="financeiro"><span class="node-top"><span>03 · CÁLCULOS</span><b>↗</b></span><h3>Matemática financeira</h3><p>Mensurar custos, juros e retorno.</p><div class="node-tags"><span>Juros simples</span><span>Compostos</span><span>Montante</span><span>Taxas</span><span>ROI</span></div><span class="node-foot">ANÁLISE DE VALOR <i>→</i></span></button>
-          <button class="topic-card topic-amber map-node node-04" data-topic="fornecedores"><span class="node-top"><span>04 · RELACIONAMENTO</span><b>↗</b></span><h3>Fornecedores</h3><p>Selecionar, avaliar e desenvolver parcerias.</p><div class="node-tags"><span>Homologação</span><span>Qualidade</span><span>Capacidade</span><span>Desempenho</span><span>Negociação</span></div><span class="node-foot">GESTÃO DE PARCEIROS <i>→</i></span></button>
-          <button class="topic-card topic-cyan map-node node-05" data-topic="controle"><span class="node-top"><span>05 · GOVERNANÇA</span><b>↗</b></span><h3>Controle e integração</h3><p>Monitorar compromissos e conectar sistemas.</p><div class="node-tags"><span>Auditoria</span><span>Contratos</span><span>SLA</span><span>VMI</span><span>EDI</span><span>ERP</span></div><span class="node-foot">INFORMAÇÃO E CONTROLE <i>→</i></span></button>
-          <button class="topic-card topic-rose map-node node-06" data-topic="riscos"><span class="node-top"><span>06 · CONTINUIDADE</span><b>↗</b></span><h3>Gestão de riscos</h3><p>Antecipar atrasos e proteger a operação.</p><div class="node-tags"><span>Atrasos</span><span>Cobertura</span><span>Plano B</span><span>Alternativas</span><span>Contingência</span></div><span class="node-foot">PREVENÇÃO E RESPOSTA <i>→</i></span></button>
+          <div class="map-center">
+            <span class="center-kicker">VISÃO INTEGRADA</span>
+            <div class="center-symbol">m.</div>
+            <strong>PROCESSOS DE<br>SUPRIMENTOS</strong>
+            <small>DA NECESSIDADE À CONTINUIDADE</small>
+          </div>
+          <button class="topic-card map-node tone-mint node-01" data-topic="compras">
+            <span class="node-top"><span>01 / AQUISIÇÃO</span><b>↗</b></span><h3>Processo de compras</h3><p>Da requisição ao pedido acompanhado.</p><div class="node-tags"><span>Requisição</span><span>Cotação</span><span>Negociação</span><span>Pedido</span><span>Aprovação</span></div><span class="node-foot">TRANSFORMAR DEMANDA EM COMPRA <i>→</i></span>
+          </button>
+          <button class="topic-card map-node tone-blue node-02" data-topic="importacao">
+            <span class="node-top"><span>02 / COMÉRCIO EXTERIOR</span><b>↗</b></span><h3>Importação</h3><p>Regras, responsabilidades e custos internacionais.</p><div class="node-tags"><span>MAPA</span><span>ANVISA</span><span>ANATEL</span><span>Drawback</span><span>Incoterms</span></div><span class="node-foot">CONECTAR MERCADOS <i>→</i></span>
+          </button>
+          <button class="topic-card map-node tone-sky node-03" data-topic="financeiro">
+            <span class="node-top"><span>03 / ANÁLISE DE VALOR</span><b>↗</b></span><h3>Matemática financeira</h3><p>Mensurar custos, juros, câmbio e retorno.</p><div class="node-tags"><span>Juros simples</span><span>Compostos</span><span>Montante</span><span>ROI</span></div><span class="node-foot">DECIDIR COM NÚMEROS <i>→</i></span>
+          </button>
+          <button class="topic-card map-node tone-amber node-04" data-topic="fornecedores">
+            <span class="node-top"><span>04 / RELACIONAMENTO</span><b>↗</b></span><h3>Fornecedores</h3><p>Selecionar, avaliar e desenvolver parcerias.</p><div class="node-tags"><span>Homologação</span><span>Qualidade</span><span>Capacidade</span><span>Desempenho</span></div><span class="node-foot">CONSTRUIR PARCERIAS <i>→</i></span>
+          </button>
+          <button class="topic-card map-node tone-teal node-05" data-topic="controle">
+            <span class="node-top"><span>05 / GOVERNANÇA</span><b>↗</b></span><h3>Controle e integração</h3><p>Monitorar compromissos e conectar sistemas.</p><div class="node-tags"><span>Auditoria</span><span>Contratos</span><span>SLA</span><span>VMI</span><span>EDI</span><span>ERP</span></div><span class="node-foot">DAR VISIBILIDADE À OPERAÇÃO <i>→</i></span>
+          </button>
+          <button class="topic-card map-node tone-violet node-06" data-topic="riscos">
+            <span class="node-top"><span>06 / CONTINUIDADE</span><b>↗</b></span><h3>Gestão de riscos</h3><p>Antecipar atrasos e proteger a operação.</p><div class="node-tags"><span>Cobertura</span><span>Plano B</span><span>Alternativas</span><span>Contingência</span></div><span class="node-foot">PROTEGER O FLUXO <i>→</i></span>
+          </button>
         </div>
       </div>
-      <div class="map-hint"><span>↔</span> No celular, deslize para os lados para percorrer o mapa. Selecione um núcleo para abrir o conteúdo.</div>
+      <div class="map-hint"><span>↳</span> Selecione qualquer ramificação para aprofundar o assunto.</div>
     </section>
+
     <section class="detail-section" id="detalhes" aria-live="polite">
-      <div class="detail-placeholder"><span class="placeholder-icon">✳</span><div><span class="strip-label">CENTRO DE CONHECIMENTO</span><h3>Escolha um núcleo acima.</h3><p>O conteúdo detalhado aparece aqui, sem perder a visão geral do mapa.</p></div></div>
+      <div class="detail-placeholder"><span class="placeholder-icon">✳</span><div><span class="strip-label">CENTRO DE CONHECIMENTO</span><h3>Abra uma ramificação do mapa.</h3><p>O conteúdo detalhado aparece aqui, mantendo a conexão com a visão geral.</p></div></div>
       <div id="detailContent" hidden></div>
     </section>
+
     <section class="formula-section" id="formulas">
-      <div class="section-heading compact"><div><div class="eyebrow"><span>FOLHA DE REVISÃO</span></div><h2>Fórmulas que você <em>precisa dominar.</em></h2></div><p>Deixe esta área aberta durante os exercícios de cálculo.</p></div>
+      <div class="section-heading compact"><div><div class="eyebrow"><span>FERRAMENTAS DE REVISÃO</span></div><h2>Fórmulas para <em>ter à mão.</em></h2></div><p>Identifique as variáveis, alinhe as unidades e só então substitua os valores.</p></div>
       <div class="formula-grid">
-        <article class="formula-card"><span class="formula-tag">JUROS SIMPLES</span><div class="formula">J = C × i × t</div><p>Juros calculados somente sobre o capital inicial.</p><div class="formula-sub">M = C + J</div><button class="copy-formula" data-copy="J = C × i × t | M = C + J">Copiar fórmula ↗</button></article>
-        <article class="formula-card featured"><span class="formula-tag">JUROS COMPOSTOS</span><div class="formula">M = C × (1 + i)<sup>n</sup></div><p>Juros calculados sobre o capital e os juros acumulados.</p><div class="formula-sub">J = M − C</div><button class="copy-formula" data-copy="M = C × (1 + i)^n | J = M − C">Copiar fórmula ↗</button></article>
-        <article class="formula-card"><span class="formula-tag">RETORNO SOBRE INVESTIMENTO</span><div class="formula">ROI = (RL ÷ I) × 100</div><p>Relaciona o retorno líquido ao valor investido.</p><div class="formula-sub">Resultado em porcentagem (%)</div><button class="copy-formula" data-copy="ROI = (Retorno líquido ÷ Investimento) × 100">Copiar fórmula ↗</button></article>
-        <article class="formula-card"><span class="formula-tag">VARIAÇÃO CAMBIAL</span><div class="formula formula-small">Impacto = US$ × (câmbio<sub>pagamento</sub> − câmbio<sub>contratação</sub>)</div><p>Mostra o efeito da mudança cambial sobre o custo da aquisição.</p><div class="formula-sub">Dólar maior no pagamento = custo maior em reais.</div><button class="copy-formula" data-copy="Impacto = Valor em US$ × (câmbio no pagamento − câmbio na contratação)">Copiar fórmula ↗</button></article>
+        <article class="formula-card"><span class="formula-tag">01 · JUROS SIMPLES</span><div class="formula">J = C × i × t</div><p>Juros calculados somente sobre o capital inicial.</p><div class="formula-sub">M = C + J</div><button class="copy-formula" data-copy="J = C × i × t | M = C + J">Copiar fórmula ↗</button></article>
+        <article class="formula-card featured"><span class="formula-tag">02 · JUROS COMPOSTOS</span><div class="formula">M = C × (1 + i)<sup>n</sup></div><p>Juros calculados sobre o capital e os juros acumulados.</p><div class="formula-sub">J = M − C</div><button class="copy-formula" data-copy="M = C × (1 + i)^n | J = M − C">Copiar fórmula ↗</button></article>
+        <article class="formula-card"><span class="formula-tag">03 · RETORNO SOBRE INVESTIMENTO</span><div class="formula">ROI = (RL ÷ I) × 100</div><p>Relaciona o retorno líquido ao valor investido.</p><div class="formula-sub">Resultado em porcentagem (%)</div><button class="copy-formula" data-copy="ROI = (Retorno líquido ÷ Investimento) × 100">Copiar fórmula ↗</button></article>
+        <article class="formula-card"><span class="formula-tag">04 · VARIAÇÃO CAMBIAL</span><div class="formula formula-small">Impacto = US$ × (câmbio₂ − câmbio₁)</div><p>Mostra o efeito da mudança cambial sobre o custo da aquisição.</p><div class="formula-sub">Dólar maior no pagamento = custo maior em reais.</div><button class="copy-formula" data-copy="Impacto = Valor em US$ × (câmbio no pagamento − câmbio na contratação)">Copiar fórmula ↗</button></article>
       </div>
       <div class="attention-note"><span>!</span><p><strong>Regra de ouro:</strong> transforme a taxa percentual em decimal (2% = 0,02) e mantenha taxa e prazo na mesma unidade de tempo.</p></div>
     </section>
+
     <section class="compare-section">
-      <div class="section-heading compact"><div><div class="eyebrow"><span>COMPARE E NÃO CONFUNDA</span></div><h2>Conceitos que parecem iguais. <em>Mas não são.</em></h2></div></div>
+      <div class="section-heading compact"><div><div class="eyebrow"><span>COMPARE E DIFERENCIE</span></div><h2>Não confunda <em>os conceitos.</em></h2></div><p>Pequenas diferenças mudam a decisão tomada na operação.</p></div>
       <div class="compare-grid">
         <article class="compare-card"><div class="compare-label">NEGOCIAÇÃO</div><h3>Distributiva <span class="loss">GANHA–PERDE</span></h3><ul><li>Uma variável, geralmente preço.</li><li>Uma parte ganha o que a outra perde.</li><li>Relação pontual e competitiva.</li></ul></article>
         <article class="compare-card compare-highlight"><div class="compare-label">NEGOCIAÇÃO</div><h3>Integrativa <span class="win">GANHA–GANHA</span></h3><ul><li>Várias variáveis ao mesmo tempo.</li><li>As duas partes podem sair melhor.</li><li>Favorece parceria de longo prazo.</li></ul></article>
@@ -87,22 +115,24 @@
         <article class="compare-card compare-highlight"><div class="compare-label">MATEMÁTICA</div><h3>Juros compostos <span class="win">JUROS SOBRE JUROS</span></h3><ul><li>Incidem sobre o valor acumulado.</li><li>O montante cresce por períodos.</li><li>Fórmula: M = C × (1 + i)ⁿ.</li></ul></article>
       </div>
     </section>
+
     <section class="quiz-section" id="quiz">
-      <div class="quiz-intro"><div class="eyebrow"><span>FIXAÇÃO ATIVA</span></div><h2>Aprendeu mesmo<br><em>ou só leu?</em></h2><p>Responda 8 questões inspiradas diretamente no material da aula. Veja seu resultado e revise os pontos que errou.</p><div class="quiz-stat"><strong>08</strong><span>QUESTÕES<br>DE REVISÃO</span></div></div>
+      <div class="quiz-intro"><div class="eyebrow"><span>FIXAÇÃO ATIVA</span></div><h2>Aprendeu mesmo<br><em>ou só leu?</em></h2><p>Responda 8 questões inspiradas no material da aula. Veja seu resultado e descubra o que merece mais uma revisão.</p><div class="quiz-stat"><strong>08</strong><span>QUESTÕES<br>DE REVISÃO</span></div></div>
       <div class="quiz-panel" id="quizPanel"><div class="quiz-start"><span class="quiz-symbol">✳</span><span class="strip-label">CHECKPOINT DE APRENDIZAGEM</span><h3>Hora de testar sua compreensão.</h3><p>Uma questão por vez. Sem pressão: o objetivo é descobrir o que merece mais uma revisão.</p><button class="primary-button" id="beginQuiz">Começar quiz <span>→</span></button></div></div>
     </section>
+
     <section class="study-plan">
-      <div class="eyebrow"><span>ESTRATÉGIA DE ESTUDO</span></div><h2>Uma sequência que <em>faz sentido.</em></h2>
+      <div class="eyebrow"><span>ROTEIRO DE ESTUDO</span></div><h2>Uma sequência que <em>faz sentido.</em></h2>
       <div class="plan-list">
-        <div class="plan-step"><span class="plan-num">01</span><div><h3>Entenda o fluxo de compras</h3><p>Comece pela sequência das sete etapas. Entenda como uma necessidade vira um pedido acompanhado até o recebimento.</p></div><span class="plan-time">BASE</span></div>
+        <div class="plan-step"><span class="plan-num">01</span><div><h3>Entenda o fluxo de compras</h3><p>Comece pela sequência das sete etapas. Entenda como uma necessidade vira um pedido acompanhado até o recebimento.</p></div><span class="plan-time">FUNDAMENTO</span></div>
         <div class="plan-step"><span class="plan-num">02</span><div><h3>Domine os conceitos de importação</h3><p>Associe cada órgão ao produto, diferencie as três modalidades de Drawback e memorize os grupos dos Incoterms.</p></div><span class="plan-time">MEMORIZAÇÃO</span></div>
         <div class="plan-step"><span class="plan-num">03</span><div><h3>Treine os cálculos</h3><p>Pratique câmbio, juros simples, compostos e ROI. Escreva a fórmula antes de substituir os valores.</p></div><span class="plan-time">PRÁTICA</span></div>
-        <div class="plan-step"><span class="plan-num">04</span><div><h3>Compare negociação e homologação</h3><p>Explique com suas palavras a diferença entre ganha-perde e ganha-ganha. Revise todos os critérios de homologação.</p></div><span class="plan-time">COMPREENSÃO</span></div>
+        <div class="plan-step"><span class="plan-num">04</span><div><h3>Compare negociação e homologação</h3><p>Explique com suas palavras a diferença entre ganha-perde e ganha-ganha. Revise os critérios de homologação.</p></div><span class="plan-time">COMPREENSÃO</span></div>
         <div class="plan-step"><span class="plan-num">05</span><div><h3>Conecte controle, contrato e tecnologia</h3><p>Separe os tipos de auditoria e saiba o papel de SLA, VMI, EDI e ERP.</p></div><span class="plan-time">ASSOCIAÇÃO</span></div>
         <div class="plan-step"><span class="plan-num">06</span><div><h3>Resolva o cenário de atraso</h3><p>Treine a ordem de ação: contatar, usar canais, avaliar estoque, acionar plano B, comunicar e registrar.</p></div><span class="plan-time">APLICAÇÃO</span></div>
       </div>
     </section>
-    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">m.</span><span>mapamental<span class="brand-dot">.</span>log</span></a><p>Feito para estudar com clareza. <span>Uma ideia de cada vez.</span></p><span class="footer-source">CONTEÚDO BASE: RESUMO — PROCESSOS DE SUPRIMENTOS · 14 SLIDES</span></footer>
+    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">m.</span><span>mapamental<span class="brand-dot">.</span>log</span></a><p>Clareza para conectar ideias. <span>Uma ramificação de cada vez.</span></p><span class="footer-source">PROCESSOS DE SUPRIMENTOS · CURSO TÉCNICO EM LOGÍSTICA</span></footer>
   </main>
   <div class="toast" id="toast" role="status"></div>
   <script src="./app.js"></script>
